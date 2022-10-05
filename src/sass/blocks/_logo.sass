@@ -1,0 +1,64 @@
+.logo
+    &__container
+        position: relative
+        padding: 13px 25px 70px
+        height: 75px
+    &__wrapper
+        display: flex
+        flex-direction: row
+        align-items: center
+        cursor: pointer
+        position: absolute
+        height: 55px
+        left: 50%
+        top: 30%
+        transform: translateX(-50%)
+    &__img 
+        height: 100%
+        animation: slideX 8s linear infinite
+        opacity: 0.9
+    &__label
+        font-size: 18px
+    &__buttons
+        display: flex
+        justify-content: space-between
+        text-align: center
+        width: 100%
+        transform: translateY(100%)
+    &__nav-language
+        cursor: pointer
+        display: flex
+        position: relative
+        font-size: 23px
+        text-decoration: none
+        color:#000
+        .underline
+            @include underline
+        &:hover > .underline
+            transform: scale(1)
+        &:hover
+            color:#000
+    &__nav-login
+        cursor: pointer
+        display: flex
+        padding-bottom: 2px
+        position: relative
+        font-size: 23px
+        text-decoration: none
+        color:#000
+        .underline
+            @include underline
+        &:hover
+            color:#000
+        &:hover > .underline
+            transform: scale(1)
+
+
+
+@keyframes slideX 
+    0% 
+        transform: translateY(0) rotate(-45deg)
+    50% 
+        transform: translateY(10%) rotate(-45deg)
+    100% 
+        transform: translateY(0%) rotate(-45deg)

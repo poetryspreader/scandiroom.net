@@ -4,50 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIFSHIC</title>
-    <!-- <link rel="icon" href="https://sitename.ru/favicon.ico" type="image/x-icon"> -->
+    <title>Scandiroom - Ремонт квартир
+        по готовым дизайн‐проектам
+    </title>
+    <!-- BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <!-- jquery -->
-
-    <!-- <script src="https://code.jquery.com/jquery-3.6.1.js"   integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"> -->
-
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css"/> -->
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 <!-- ? HEADER -->
 <section class="header">
     <!-- * LOGO -->
-    <div class="logo">
-        <div class="logo__box logo__box-widthHover">
-            <span class="logo__barcode-wrapper">
-                <span class="logo__barcode logo__barcode-colorSwipe">i</span>
-                <span class="logo__barcode logo__barcode-colorSwipe">l</span>
-                <span class="logo__barcode logo__barcode-colorSwipe">j</span>
-                <span class="logo__barcode logo__barcode-colorSwipe">a</span>
-                <span class="logo__barcode logo__barcode-colorSwipe">l</span>
-                <span class="logo__barcode logo__barcode-colorSwipe">i</span>
-                <span class="logo__barcode logo__barcode-colorSwipe">f</span>
-                <span class="logo__barcode logo__barcode-colorSwipe">s</span>
-                <span class="logo__barcode logo__barcode-colorSwipe">i</span>
-                <span class="logo__barcode logo__barcode-colorSwipe">c</span>
-                <span class="logo__barcode logo__barcode-colorSwipe">s</span>
-            </span>
+    <div class="logo__container">
+        <div class="logo__wrapper">
+            <img src="img/logo.png" alt="logo" class="logo__img">
+            <div class="logo__label">
+                <b>scandiroom</b><br>студия ремонта
+            </div>
         </div>
         <div class="logo__buttons">
-            <a class="logo__nav-language">EN</a>
-            <a class="logo__nav-login">Войти</a> 
+            <a class="logo__nav-language">EN
+                <span class="underline"></span>
+            </a>
+            <a class="logo__nav-login">войти
+                <span class="underline"></span>
+            </a> 
         </div> 
     </div>  
     <!-- * NAVIGATION -->
     <div class="header__nav-scroll-container">
         <div class="header__nav-wrapper">
             <menu class="header__nav">
-                <li data-modal="promo__new" class="header__nav-item header__nav-item-active"><a class="header__nav-link">Новое</a></li>
-                <li data-modal="promo__photos" class="header__nav-item"><a class="header__nav-link">Логотипы</a></li>
+                <li data-modal="promo__new" class="header__nav-item header__nav-item-active"><a class="header__nav-link">Главная</a></li>
+                <li data-modal="promo__photos" class="header__nav-item"><a class="header__nav-link">Готовые решения</a></li>
                 <li data-modal="promo__web" class="header__nav-item"><a class="header__nav-link">Сайты</a></li>
                 <li data-modal="promo__forms" class="header__nav-item"><a class="header__nav-link">Cвязь</a></li>
             </menu>
@@ -55,193 +44,8 @@
     </div>
 </section>
 
-<!-- ? PROMO -->
-<section class="promo">
-    <!-- ? NEW -->
-    <div class="promo__modal promo__modal-active">
-        <div class="new">
-            <div class="new__item">
-                <img src="img/spotify.jpg" alt="spotify">
-            </div>
-            <div class="new__item">
-                <div class="proslider first">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner active">
-                            <div class="carousel-item active">
-                            <img src="img/1.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                            <img src="img/5.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                            <img src="img/3.jpg" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button> -->
-                    </div>
-                </div>
-            </div>
-            <div class="new__item">
-                <img class="promo__left-img"src="img/lying.jpg" alt="spotify">
-            </div>
-        </div>
-    </div>
-    
-    <!-- ? LOGOTYPE -->
-    <div class="promo__modal">
-        <div class="logotype">
-            <div class="logotype__item">
-                <div class="arson">
-                    <div class="arson__logo">
-                        <div class="arson__logo-vertical"></div>
-                        <div class="arson__logo-horizontal"></div>
-                        <div class="arson__logo-rect"></div>
-                    </div>
-                    <div class="arson__logo-text">
-                        <span>kopā ar sauli</span> 
-                    </div>
-                </div>
-            </div>
-            <div class="logotype__item"></div>
-            <div class="logotype__item"></div>
-            <div class="logotype__item"></div>
-            <div class="logotype__item"></div>
-            <div class="logotype__item"></div>
-        </div>
-    </div>
-
-    <!-- ? WEB -->
-    <div class="promo__modal">
-        <div class="web">
-            <div class="web__disclaimer">
-                упс... пока нихуя нету
-            </div>
-        </div>
-    </div>
-
-    <!-- ? FORM -> EMAIL -->
-    <div class="promo__modal">
-        <div class="form">
-            <form action="#" id="form" class="form__body">
-                <span class="form__tilda">~</span>
-                <h1 class="form__title">Отправка данных на почту:</h1>
-                <!-- * NAME -->
-                <div class="form__item">
-                    <label for="formName" class="form__label">Имя*:</label>
-                    <input id="formName" type="text" name="name" class="form__input _req">
-                </div>
-                <!-- * EMAIL -->
-                <div class="form__item">
-                    <label for="formEmail" class="form__label">E-mail*</label>
-                    <input id="formEmail" type="text" class="form__input _req _email">
-                </div>
-                <!-- * RADIO -->
-                <div class="form__item">
-                    <div class="form__label">Пол:</div>
-                    <div class="options">
-                        <div class="options__item">
-                            <input id="formMale" checked type="radio" value="male" name="sex" class="options__input">
-                            <label for="formMale" class="options__label"><span>Мужчина</span></label>
-                        </div>
-                    </div>
-                    <div class="options">
-                        <div class="options__item">
-                            <input id="formFemale"type="radio" value="female" name="sex" class="options__input">
-                            <label for="formFemale" class="options__label"><span>Женщина</span></label>
-                        </div>
-                    </div>
-                </div>
-                <!-- * MESSAGE -->
-                <div class="form__item">
-                    <label for="formMessage" class="form__label">
-                        Сообщение:
-                    </label>
-                    <textarea name="massage" id="forMessage" class="form__input message"></textarea>
-                </div>
-                <!-- * OPTIONS -->
-                <div class="form__item">
-                    <div class="form__label">
-                        <select name="age" class="select">
-                            <option value="от 18 до 25" selected>Молодой</option>
-                            <option value="от 25 до 45">Старый</option>
-                            <option value="от 45">Супер стар</option>
-                        </select>
-                    </div>
-                </div>
-                <!-- * FILE -->
-                <div class="form__item">
-                    <div class="form__label">Прикрепить фото</div>
-                    <div class="file">
-                        <div class="file__item">
-                            <input type="file" id="formImage" accept=".jpg, .png, .gif" name="image" class="file__input">
-                            <div class="file__button">Выбрать</div>
-                        </div>
-                        <div id="formPreview" class="file__preview"></div>
-                    </div>
-                </div>
-                <!-- * CHECKBOX -->
-                <div class="form__item">
-                    <div class="checkbox">
-                        <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req">
-                        <label for="formAgreement" class="checkbox__label"><span>Я даю своё согласие на обработку персональных данных в соответствии с <a href="#">Условиями</a>*</span></label>
-                    </div>
-                </div>
-                <!-- * BUTTON -->
-                <button type="submit" class="form__button">отправить</button>
-            </form>
-        </div>
-    </div>
-</section>
 
 
-<!-- <section class="buttons">
-    <div class="container">
-        <div class="buttons__inner">
-
-            <div class="buttons__unit">
-                <img class="buttons__image" src="/icons/quotes.png" alt="">
-                <div class="buttons__slider_wrapper">
-                    <div class="buttons__slider_1 buttons__slider_1-active">
-                        ыт
-                    </div>
-                    <div class="buttons__slider_2">
-                        ты пидор
-                    </div>
-                </div>
-            </div>
-
-            <div class="buttons__unit">
-                <img class="buttons__image" src="/icons/quotes.png" alt="">
-                <div class="buttons__slider_wrapper">
-                    <div class="buttons__slider_1 buttons__slider_1-active">
-                        ыть
-                    </div>
-                    <div class="buttons__slider_2">
-                        ты пидор
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
-
-
-
-<h1></h1>
-
-
-
-<!-- <div class="rocket">
-    <iframe src='https://my.spline.design/untitled-2dc979d00886d3fcfcd5a35f4649f3bd/' frameborder='0' width='100%' height='100%'></iframe>
-</div> -->
 
 <script src="js/libraries/jquery-3.6.1.js"></script>
 <script src="https://unpkg.com/js-polyfills@0.x.x/keyboard.js"></script>
