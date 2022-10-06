@@ -1,0 +1,42 @@
+.order
+    &__wrapper
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        transform: translateX(120%)
+        background-color: #fff
+        padding: 80px 20px
+        transition: 0.5s
+    &__hidden
+        transform: translateX(0%)
+    &__close
+        cursor: pointer
+        display: flex   
+        justify-content: center
+        align-items: center
+        position: fixed
+        width: 60px
+        height: 60px
+        right: 40px
+        top: 40px
+        &:hover::before, &:hover::after
+            background-color: #7e7e7e
+        &::before
+            content: ""
+            position: absolute
+            width: 3px
+            height: 60px
+            background-color: #000000
+            transform: rotate(45deg)      
+        &::after
+            content: ""
+            position: absolute
+            width: 60px
+            height: 3px
+            background-color: #000000
+            transform: rotate(45deg)
+    &__label
+        margin-top: 140px
+        font-size: 30px

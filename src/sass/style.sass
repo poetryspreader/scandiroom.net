@@ -5,11 +5,21 @@
 // * BLOCKS
 @import "blocks/header"
 @import "blocks/logo"
+@import "blocks/promo"
+@import "blocks/buttons"
+@import "blocks/order"
+@import "blocks/fonts"
 
 body,html
+    font-family: 'Playfair Display', serif
     height: 100%
     line-height: 1
 
+.body__wrapper
+    position: relative
+    width: 100%
+    height: 100%
+    
 .container 
     margin: 0 auto
     width: 100%
@@ -18,3 +28,6 @@ body,html
 h1,h2,h3,h4,h5,h6
     margin: 0
     padding: 0
+
+*
+    box-sizing: border-box

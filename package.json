@@ -30,6 +30,7 @@
   ],
   "emulator.emulatorPath": "C:/UsersMe/AppData/Local/Android/Sdk/emulator",
   "dependencies": {
+    "@types/jquery": "^3.5.14",
     "jquery.terminal": "^2.34.0"
   }
 }
