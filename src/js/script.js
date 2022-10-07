@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", function() {
 
-    // * NAV TOGGLER
+    // ? NAV TOGGLER
     function promoToggler(item, i) {
         $(item).on("click", function(e) {
             $(this).siblings().removeClass('header__nav-item-active');
@@ -16,10 +16,10 @@ window.addEventListener("DOMContentLoaded", function() {
     promoToggler('[data-modal=promo__contacts]', 2);
     // promoToggler('[data-modal=promo__forms]', 3);
 
-    // * ORDER LIST
+    // ? ORDER LIST
     function orderListButton() {
         $(".button__order").on('click', function() {
-            $('.order__wrapper').toggleClass('order__hidden');
+            $('.order').toggleClass('order__hidden');
         });
     }
     orderListButton();
@@ -27,12 +27,21 @@ window.addEventListener("DOMContentLoaded", function() {
     function orderListCross() {
         $('.order__close').on('click', function() {
             console.log('ssss');
-            $('.order__wrapper').toggleClass('order__hidden');
+            $('.order').toggleClass('order__hidden');
         });
     }
     orderListCross();
 
+    // ? CAROUSEL PROMO
+    $('.carousel').carousel({
+        interval: 10000,
+        hover: this.stop,
+      });
 
+    // * carousel arrows
+    // function carouselArrowAttach() {
+    //     let formReq = document.querySelectorAll('._req');
+    // }
 
 
 

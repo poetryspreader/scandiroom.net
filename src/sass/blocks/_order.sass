@@ -1,14 +1,15 @@
 .order
-    &__wrapper
-        position: fixed
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        transform: translateX(120%)
-        background-color: #fff
-        padding: 80px 20px
-        transition: 0.5s
+    position: fixed
+    display: flex
+    flex-wrap: wrap
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    transform: translateX(120%)
+    background-color: #fff
+    transition: 0.5s
+    z-index: 2
     &__hidden
         transform: translateX(0%)
     &__close
@@ -16,9 +17,7 @@
         display: flex   
         justify-content: center
         align-items: center
-        position: fixed
-        width: 60px
-        height: 60px
+        position: absolute
         right: 40px
         top: 40px
         &:hover::before, &:hover::after
@@ -27,16 +26,36 @@
             content: ""
             position: absolute
             width: 3px
-            height: 60px
+            height: 30px
             background-color: #000000
             transform: rotate(45deg)      
         &::after
             content: ""
             position: absolute
-            width: 60px
+            width: 30px
             height: 3px
             background-color: #000000
             transform: rotate(45deg)
+    &__form
+        padding: 50px 30px
+        position: relative
+        width: 50%
     &__label
-        margin-top: 140px
-        font-size: 30px
+        font-size: 40px
+        color: #0697cb
+    &__text 
+        width: 70%
+        margin-top: 30px
+        font-size: 22px
+        color: #0697cb
+    &__bg
+        width: 50%
+        height: 100vh
+        overflow: hidden
+        img
+            max-width: 1000px 
+            justify-content: start
+            height: calc(100vh + 60px)
+        
+        
+        
