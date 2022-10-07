@@ -38,10 +38,7 @@ window.addEventListener("DOMContentLoaded", function() {
         hover: this.stop,
       });
 
-    // * carousel arrows
-    // function carouselArrowAttach() {
-    //     let formReq = document.querySelectorAll('._req');
-    // }
+
 
 
 
