@@ -120,16 +120,6 @@
                             </button>
                         </div>
                     </div>
-                    
-
-
-
-
-
-
-
-
-                    
                 </div>
             </div>
             <!-- * OPTIONS page -->
@@ -157,7 +147,7 @@
 
         </section>
 
-        <!-- * ORDER FORM page -->
+        <!-- ? ORDER FORM page -->
         <section class="order">
             <div class="order__form">
                 <div class="order__close"></div>
@@ -165,13 +155,84 @@
                     Заказ проекта
                 </div>
                 <div class="order__text">
-                    Наша студия занимается проектированием интерьеров для жилых и коммерческих
-                    объектов, внутренних и внешних интерьеров. Мы делаем работу на совесть. 
-                    Предлагаем эффективное, изящное и качественное решение.
+                    Наша студия занимается проектированием внутренних и внешних интерьеров для жилых и коммерческих
+                    объектов. Мы делаем работу на совесть и нам нравится результат. 
+                    Предлагаем эффективное, изящное и качественное решение. 
+                    <p>
+                        Для быстрого и успешного понимания нашей задачи заполните форму и мы с вами свяжемся.
+                    </p>
                 </div>
+                <!-- * FORM -->
+                <form action="#" id="form" class="form">
+                    <!-- <span class="form__tilda">~</span> -->
+                    <!-- <h1 class="form__title">Отправка данных на почту:</h1> -->
+                    <!-- * name -->
+                    <div class="form__item">
+                        <label for="formName" class="form__label">Имя*:</label>
+                        <input id="formName" type="text" name="name" class="form__input _req">
+                    </div>
+                    <!-- * email -->
+                    <div class="form__item">
+                        <label for="formEmail" class="form__label">E-mail*:</label>
+                        <input id="formEmail" type="text" class="form__input _req _email">
+                    </div>
+                    <!-- * radio -->
+                    <div class="form__item">
+                        <div class="form__label">Пол:</div>
+                        <div class="options">
+                            <div class="options__item">
+                                <input id="formMale" checked type="radio" value="male" name="sex" class="options__input">
+                                <label for="formMale" class="options__label"><span>Мужчина</span></label>
+                            </div>
+                        </div>
+                        <div class="options">
+                            <div class="options__item">
+                                <input id="formFemale"type="radio" value="female" name="sex" class="options__input">
+                                <label for="formFemale" class="options__label"><span>Женщина</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- * message -->
+                    <div class="form__item">
+                        <label for="formMessage" class="form__label">
+                            Сообщение:
+                        </label>
+                        <textarea name="massage" id="forMessage" class="form__input message"></textarea>
+                    </div>
+                    <!-- * options -->
+                    <div class="form__item">
+                        <div class="form__label">
+                            <select name="age" class="select">
+                                <option value="от 18 до 25" selected>Молодой</option>
+                                <option value="от 25 до 45">Старый</option>
+                                <option value="от 45">Супер стар</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- * file -->
+                    <div class="form__item">
+                        <div class="form__label">Прикрепить фото</div>
+                        <div class="file">
+                            <div class="file__item">
+                                <input type="file" id="formImage" accept=".jpg, .png, .gif" name="image" class="file__input">
+                                <div class="file__button">Выбрать</div>
+                            </div>
+                            <div id="formPreview" class="file__preview"></div>
+                        </div>
+                    </div>
+                    <!-- * checkbox -->
+                    <div class="form__item">
+                        <div class="checkbox">
+                            <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req">
+                            <label for="formAgreement" class="checkbox__label"><span>Я даю своё согласие на обработку персональных данных в соответствии с <a href="#">Условиями</a>*</span></label>
+                        </div>
+                    </div>
+                    <!-- * button -->
+                    <button type="submit" class="form__button">Отправить</button>
+                </form>
             </div>
             <div class="order__bg">
-                <img src="/img/order/flowers.jpg" alt="flowers">
+                <img src="img/order/flowers.jpg" alt="flowers">
             </div>
         </section>
 
