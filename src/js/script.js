@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", function() {
     
     // * button toggle
     function orderListButton() {
-        $(".button__order").on('click', function() {
+        $("#order-btn").on('click', function() {
             $('.order').toggleClass('order__visible');
             $('body').toggleClass('scroll-hidden');
         });
@@ -55,8 +55,25 @@ window.addEventListener("DOMContentLoaded", function() {
 
         let error = formValidate(form);
 
+        let formData = new FormData(form);
+        formData.append('image', $("#formImage")[0].files[0]);
+
         if (error === 0) {
-            
+            $(".order")[0].classList.add("_sending");
+            let response = await fetch('sendmail.php', {
+                method: POST,
+                body: formData
+            });    
+            if (response.ok) {
+                let result = await response.json();
+                alert(result.message);
+                $('#formPreview')[0].innerHTML = '';
+                form.reset();
+                $(".order")[0].classList.remove("_sending");
+            } else {
+                alert('Ошибка');
+                $(".order")[0].classList.remove("_sending");
+            }
         } else {
             alert('заполните обязательные поля');
         }
@@ -105,18 +122,16 @@ window.addEventListener("DOMContentLoaded", function() {
         return !/@/.test(input.value);
     }
 
-    
     // слушаем изменения в инпуте file
-    $('.file__input').on('change', () => {
-        console.log($(this));
-        // uploadFile(this.files[0]);
+    $("#formImage")[0].addEventListener('change', () => {
+        uploadFile($("#formImage")[0].files[0]);
     });
 
     function uploadFile(file) {
         // проверяем тип файла 
         if (!['image/jpeg', 'image/png', 'image/gif'].includes(file.type)) {
             alert('Разрешены только изображения');
-            $('#formImage').value = '';
+            $("#formImage")[0].value = '';
             return;
         }
         //проверяем размер файла (< 2 Mb)
@@ -124,7 +139,17 @@ window.addEventListener("DOMContentLoaded", function() {
             alert('Файл должен быть менее 2 Мб');
             return;
         }
+        // загружаем превью с загруженным файлом
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            $('#formPreview')[0].innerHTML = `<img src="${e.target.result}" alt="Фото">`;
+        };
+        reader.onerror = function(e){
+            alert('Ошибка');
+        };
+        reader.readAsDataURL(file);
     }
+
 
 
 
