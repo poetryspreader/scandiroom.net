@@ -29,17 +29,16 @@ window.addEventListener("DOMContentLoaded", function() {
     // * button toggle
     function orderListButton() {
         $("#order-btn").on('click', function() {
-            $('.order').toggleClass('order__visible');
-            $('body').toggleClass('scroll-hidden');
+            $('.order').addClass('__visible');
+            $('body').addClass('scroll-hidden');
         });
     }
     orderListButton();
 
-    // * cross toggle
+    // * cross toggle order
     function orderListCross() {
-        $('.order__close').on('click', function() {
-            console.log('ssss');
-            $('.order').toggleClass('order__visible');
+        $('.cross').on('click', function() {
+            $('.order').removeClass('__visible');
         });
     }
     orderListCross();
@@ -60,20 +59,20 @@ window.addEventListener("DOMContentLoaded", function() {
 
         if (error === 0) {
             $(".order")[0].classList.add("_sending");
-            let response = await fetch('sendmail.php', {
-                method: POST,
-                body: formData
-            });    
-            if (response.ok) {
-                let result = await response.json();
-                alert(result.message);
-                $('#formPreview')[0].innerHTML = '';
-                form.reset();
-                $(".order")[0].classList.remove("_sending");
-            } else {
-                alert('Ошибка');
-                $(".order")[0].classList.remove("_sending");
-            }
+            // let response = await fetch('sendmail.php', {
+            //     method: POST,
+            //     body: formData
+            // });    
+            // if (response.ok) {
+            //     let result = await response.json();
+            //     alert(result.message);
+            //     $('#formPreview')[0].innerHTML = '';
+            //     form.reset();
+            //     $(".order")[0].classList.remove("_sending");
+            // } else {
+            //     alert('Ошибка');
+            //     $(".order")[0].classList.remove("_sending");
+            // }
         } else {
             alert('заполните обязательные поля');
         }
@@ -150,11 +149,28 @@ window.addEventListener("DOMContentLoaded", function() {
         reader.readAsDataURL(file);
     }
 
+    // ? LOGIN 
+    
+    // * login button toggle
+    function loginButton() {
+        $("#login-btn").on('click', function() {
+            $('.login').addClass('__visible');
+            $('body').addClass('scroll-hidden');
+        });
+    }
+    loginButton();
 
+    // * cross login toggle 
+    function loginCross() {
+        $('.cross').on('click', function() {
+            $('.login').removeClass('__visible');
+        });
+    }
+    loginCross();
 
+    // ? JQUERY VALIDATE
 
-
-
+    $('#form').validate();
 
 
 

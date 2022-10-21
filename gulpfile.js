@@ -35,6 +35,7 @@ task('watch', function() {
     watch("src/sass/**/*.+(scss|sass)", parallel('styles'));
     watch("src/*.html").on("change", reload);
     watch("src/js/script.js").on("change", reload);
+    // watch("src/icons/*.svg").on("change", reload);
 });
 
 task('default', parallel('watch','server','styles'));

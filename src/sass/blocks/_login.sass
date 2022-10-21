@@ -1,0 +1,148 @@
+.login 
+    position: fixed
+    display: block
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    transform: translateY(120%)
+    background-color: #000
+    color: #fff
+    transition: 0.5s
+    z-index: 2
+    overflow: auto
+    padding-bottom: 2em
+    .cross::before,.cross::after
+        background-color: #7e7e7e
+    .cross:hover::before,.cross:hover::after
+        background-color: #ffffff
+    .logo__img
+        filter: hue-rotate(300deg)
+    &__wrapper
+        display: flex
+        flex-direction: column
+        height: 100%
+        padding: 20px 50px
+    .logo__wrapper
+        position: relative
+        top: 20px
+        justify-content: center
+        flex: 0 0 auto
+    &__auth
+        &-form
+            position: relative
+            left: 50%
+            transform: translateX(-50%)
+            margin-top: 3em
+            width: 380px
+            text-align: center
+            h2
+                font-size: 2.6em
+                line-height: 1.1em
+                margin-bottom: 0.5em
+            div
+                display: block
+        &-link 
+            margin-bottom: 0.7em
+            span
+                color: hsla(0,0%,100%,.5)
+                display: inline
+                text-decoration: none
+                outline: none
+                border-bottom: 1px dashed hsla(0,0%,100%,.5)
+
+    &__oauth
+        &-form
+            h4
+                font-size: .85em
+                line-height: 1.1em
+                color: hsla(0,0%,100%,.5)
+        &-panel
+            overflow: hidden
+            position: relative
+            margin: 1.1em auto 2em
+        &-item
+            cursor: pointer
+            outline: none
+            width: 50%
+            padding: 0.5em 0
+            float: left
+            &:hover
+                opacity: 0.9
+            &-vk
+                background-color: #4a7194
+                &::before
+                    background: url("../../icons/vk.svg") 50% 50%/contain no-repeat
+            &-facebook
+                background-color: #3b5a94
+                &::before
+                    background: url("../../icons/facebook.svg") 50% 50%/contain no-repeat
+            &-google
+                background-color: #db4339
+                &::before
+                    background: url("../../icons/google.svg") 50% 50%/contain no-repeat
+            &-twitter
+                background-color: #00abe9
+                &::before
+                    background: url("../../icons/twitter.svg") 50% 50%/contain no-repeat
+            &::before
+                content: ""
+                display: block
+                position: relative
+                margin: 0 auto
+                width: 4em
+                height: 4em
+    &__form
+        position: relative
+        h4
+            font-weight: lighter
+            font-size: .85em
+            line-height: 1.1em
+            color: hsla(0,0%,100%,.5)
+        &-fields
+            margin-top: 1.5em
+        &-field 
+            position: relative
+            height: 93px
+            font-size: 32px
+            padding: 0 10px
+            text-align: center
+            background-color: #000
+            color: #fff
+            border: 1px solid #333 
+            letter-spacing: .03em
+            outline: none
+            width: 100%
+            max-width: 100%
+            &_first 
+                top: 1px
+                border-radius: 0.3em 0.3em 0 0 !important
+            &_indented
+                padding-right: 30px
+            &_last 
+                border-radius: 0 0 0.3em 0.3em
+        &-button
+            font-size: 1.6em
+            margin: 0.6em 0 1em
+            width: 100%
+            height: 80px
+            background-color: #2f65f6
+            cursor: pointer
+            color: #fff
+            border: none
+            outline: none
+            border-radius: 0.2em
+            &:disabled
+                background: none
+                box-shadow: inset 0 0 0 100px hsla(0,0%,100%,.15)!important
+                color: hsla(0,0%,100%,.4)!important
+                cursor: default
+    &__agreement
+        display: inline-flex
+        margin: 1.5em 0
+    &__label-agreement
+        color: hsla(0,0%,100%,.5)
+    &__input-agreement
+        position: relative
+        top: -15px
+        left: -4px
